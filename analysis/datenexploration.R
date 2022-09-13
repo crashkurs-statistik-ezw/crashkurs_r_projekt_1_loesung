@@ -90,3 +90,12 @@ ggplot(hr_cleaned, aes(x = age, y = monthly_income)) +
 # images/punktdiagramm_monatseinkommen_alter.png
 ggsave("images/punktdiagramm_monatseinkommen_alter.png", width = 8,
        height = 5, dpi = 300)
+
+# 2.6.5
+hr_cleaned %>%
+  mutate(
+    age_above_average = age > mean(age)
+  ) %>%
+  ggplot(aes(x = job_satisfaction)) +
+  geom_bar() +
+  facet_wrap(~age_above_average)
