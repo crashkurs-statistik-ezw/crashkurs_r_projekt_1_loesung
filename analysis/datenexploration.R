@@ -1,21 +1,21 @@
 
-# 2.5 Setup ---------------------------------------------------------------
+# 1.5 Setup ---------------------------------------------------------------
 
-# 2.5.1 Lade den Datensatz
+# 1.5.1 Lade den Datensatz
 # * Lade den Datensatz data/cleaned/hr_cleaned.csv mit der Funktion read_csv
 # * Speichere den Datensatz in der Variable hr_cleaned
 hr_cleaned <- read_csv("data/cleaned/hr_cleaned.csv")
 
 
-# 2.6 Daten explorieren  ------------------------------------------------
+# 1.6 Daten explorieren  ------------------------------------------------
 
-# 2.6.1 Daten anzeigen
+# 1.6.1 Daten anzeigen
 # Zeige dir den Datensatz mit der Funktion glimpse und view an
 glimpse(hr_cleaned)
 view(hr_cleaned)
 
 
-# 2.6.2 Reihen und Spalten zählen
+# 1.6.2 Reihen und Spalten zählen
 # Wie viele Reihen und Spalten hat der Datensatz? Nutze die Funktionen nrow, 
 # ncol und dim
 nrow(hr_cleaned)
@@ -23,13 +23,13 @@ ncol(hr_cleaned)
 dim(hr_cleaned)
 
 
-# 2.6.3 Geschlechterverteilung
+# 1.6.3 Geschlechterverteilung
 # Wie viele Männer und Frauen sind im Datensatz?
 hr_cleaned %>%
   count(gender)
 
 
-# 2.6.4 Durchschnittliches Alter berechnen
+# 1.6.4 Durchschnittliches Alter berechnen
 # Bestimme den Mittelwert, Median und Modalwert des Alters der Mitarbeitenden
 mean(hr_cleaned$age, na.rm = TRUE)
 median(hr_cleaned$age, na.rm = TRUE)
@@ -37,13 +37,13 @@ hr_cleaned %>%
   count(age, sort = TRUE)
 
 
-# 2.6.5 Table lesen
+# 1.6.5 Table lesen
 # Wie viele Mitarbeitende sind 29 Jahre alt und wie viele sind 60 Jahre alt?
 # 29 -> 68
 # 60 -> 5
 
 
-# 2.6.6 Altersverteilung bestimmen
+# 1.6.6 Altersverteilung bestimmen
 # Bestimme die Spannweite, Varianz und Standardabweichung des Alters
 range(hr_cleaned$age)
 sd(hr_cleaned$age)
