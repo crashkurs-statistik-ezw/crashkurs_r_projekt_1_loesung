@@ -32,5 +32,5 @@ write_csv(hr_cleaned, "data/cleaned/hr_cleaned.csv")
 # 2.4.2 SAV-Datei exportieren
 # * Um die Daten in SPSS zu nutzen, exportiere den gereinigten Datensatz mit der
 #   Funktion write_sav
-# * Speichere die Daten unter data/export/hr_cleaned.sav
-write_sav(hr_cleaned, "data/export/hr_cleaned.sav")
+# * Speichere die Daten unter data/cleaned/hr_cleaned.sav
+write_sav(hr_cleaned, "data/cleaned/hr_cleaned.sav")
