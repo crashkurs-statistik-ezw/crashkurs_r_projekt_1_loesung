@@ -62,8 +62,10 @@ ggplot(hr_cleaned, aes(x = age)) +
   geom_boxplot()
 
 # 2.6.2 Visualisierungen speichern
-# Speichere die Visualisierungen im R-Projekt ab unter dem Pfad
-# images/histogram_verteilung_alter.png und images/boxplot_verteilung_alter
+# * Speichere die Visualisierungen im R-Projekt ab unter dem Pfad
+#   images/histogram_verteilung_alter.png und images/boxplot_verteilung_alter
+# * ggsave speichert immer die letzte Visualisierung ab, du musst also den Code
+#   jeweils durchführen, bevor du die Visualisierung speicherst
 ggsave("images/histogram_verteilung_alter.png",
        width = 8, height = 5, dpi = 300)
 ggsave("images/boxplot_verteilung_alter.png",
